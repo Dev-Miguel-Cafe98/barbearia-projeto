@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+
 /* Alterando o Box Model */
 * {
     box-sizing: border-box;
@@ -63,7 +66,7 @@ a {
 .topo {
     position: sticky;
     top: 0;
-    background-color: var(--cor-clara);
+    background-color: var(--cor-escura);
     z-index: 10;
 }
 
@@ -88,7 +91,7 @@ aplicamos os ajustes de layout (flex) */
     max-width: 1000px;
     margin: auto;
     /* background-color: yellow; */
-    font-family: 'Maven Pro', sans-serif;
+    font-family: "Mave Pro", sans-serif;
 }
 
 .titulo-menu a {
@@ -479,9 +482,7 @@ footer {
     text-align: center;
 }
 
-.topo {
-    background-color: black;
-}
+
 
 .links-menu {
     background-color: blanchedalmond;
@@ -566,7 +567,8 @@ footer {
 
 
 .card {
-    width: calc(33.33% - 20px); /* Three cards per row, approximately */
+    width: calc(33.33% - 20px);
+    /* Three cards per row, approximately */
     margin: 10px;
     /* You might reduce or remove margin if using gap */
     border: 1px solid #D6D6D6;
@@ -578,8 +580,8 @@ footer {
     box-sizing: border-box;
 }
 
-
 .cards-container {
+    background-image: url('../imagens/fundo-cards.jpg');
     /* Remove these lines: */
     display: flex;
     flex-wrap: wrap;
@@ -590,6 +592,40 @@ footer {
     margin-top: 20px;
     /* Keep top margin if needed */
 }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+        /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px);
+        /* One card per row */
+    }
+}
+
 
 
 .cards-container {
