@@ -546,7 +546,7 @@ footer {
     background-color: #a9a9a9;
     padding: 50px;
     /* Adds padding around the container */
-    border: 50px solid #fcfbfb;
+    /* border: 50px solid #fcfbfb; */
     /* Adds a solid black border */
     display: flex;
     /* Enables flexbox for centering */
