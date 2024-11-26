@@ -28,7 +28,7 @@
 
     <main class="conteudo">
         <article class="banner">
-            <div class="banner-content">
+            <div class="banner-content ">
                 <h2>Bem-vindo à Barbearia Two Brothers</h2>
                 <p>Seu estilo, nossa paixão.</p>
                 <a href="#" class="button">Agende seu horário</a>
@@ -43,35 +43,50 @@
                     ambiente moderno, oferecemos uma ampla gama de serviços para atender às suas necessidades."</p>
             </article>
         </div>
+        <article class="fundo-card  ">
+            <section class="servicos limitador"> <!-- Use <section> instead of <div> -->
+                <h2>Nossos Serviços</h2>
 
-        <section class="servicos limitador"> <!-- Use <section> instead of <div> -->
-            <h2>Nossos Serviços</h2>
+                <div class="cards-container">
+                    <article class="card"> <!-- Use <article> for each card -->
+                        <img src="imagens/corte.jpg" alt="Corte Moderno">
+                        <h3>Corte Moderno</h3>
+                        <p>R$ 30,00</p>
+                        <button>Agendar horário</button>
+                    </article>
+                    <article class="card ">
+                        <img src="imagens/corte-barba.jpg" alt="Corte Clássico">
+                        <h3>Corte + Barba</h3>
+                        <p>R$ 40,00</p>
+                        <button>Agendar horário</button>
+                    </article>
+                    <article class="card">
+                        <img src="imagens/barba.jpg" alt="Barba">
+                        <h3>Barba</h3>
+                        <p>R$ 30,00</p>
+                        <button>Agendar horário</button>
+                    </article>
+                    <!-- Add more cards as needed -->
+                </div>
+            </section>
+        </article>
 
-            <div class="cards-container">
-                <article class="card"> <!-- Use <article> for each card -->
-                    <img src="imagens/corte.jpg" alt="Corte Moderno">
-                    <h3>Corte Moderno</h3>
-                    <p>R$ 30,00</p>
-                    <button>Agendar horário</button>
-                </article>
-                <article class="card">
-                    <img src="imagens/corte-barba.jpg" alt="Corte Clássico">
-                    <h3>Corte + Barba</h3>
-                    <p>R$ 40,00</p>
-                    <button>Agendar horário</button>
-                </article>
-                <article class="card">
-                    <img src="imagens/barba.jpg" alt="Barba">
-                    <h3>Barba</h3>
-                    <p>R$ 30,00</p>
-                    <button>Agendar horário</button>
-                </article>
-                <!-- Add more cards as needed -->
+        <section class="client-comments">
+            <h2 class="comment-title">Comentários do Cliente</h2>
+            <div class="comment-cards">
+              <article class="card">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+                <p class="client-name">- John Doe</p>
+              </article>
+              <article class="card">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+                <p class="client-name">- Jane Smith</p>
+              </article>
             </div>
-        </section>
+          </section>
+          
 
-
-        <article class="rodape-container limitador">
+        <article class="rodape-container limitador ">
             <figure><img src="imagens/2_irmãos-removebg-preview.png" alt=""></figure>
             <p> Você
                 encontra o melhor da barbearia tradicional

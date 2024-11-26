@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Sedan+SC&display=swap');
 
 
 /* Alterando o Box Model */
@@ -66,9 +66,10 @@ a {
 .topo {
     position: sticky;
     top: 0;
-    background-color: var(--cor-escura);
+    background: linear-gradient(to right, #030303 0%, #101114 55%, #6F7991 100%); /* Added gradient */
     z-index: 10;
 }
+
 
 /* div com a classe limitador DENTRO do topo (sub-cabeçalho):
 aplicamos os ajustes de layout (flex) */
@@ -84,6 +85,7 @@ aplicamos os ajustes de layout (flex) */
     max-width: 1000px;
     margin: auto;
     /* background-color: yellow; */
+    
 }
 
 .limitador img {
@@ -91,7 +93,6 @@ aplicamos os ajustes de layout (flex) */
     max-width: 1000px;
     margin: auto;
     /* background-color: yellow; */
-    font-family: "Mave Pro", sans-serif;
 }
 
 .titulo-menu a {
@@ -231,38 +232,6 @@ article address {
 }
 
 
-/* Regras para as demais páginas (Produtos, Serviços e Contato) */
-.conteudo-geral {
-    background-color: var(--cor-intermediaria);
-    padding: 0.5rem;
-
-}
-
-.conteudo-geral h2 {
-    padding-left: 0;
-    font-size: 1.8rem;
-    border-bottom: solid 1px;
-}
-
-
-
-
-
-
-
-#cep {
-    width: 50%;
-}
-
-#buscar {
-    width: 49%;
-    padding: 12px;
-}
-
-.campos-restantes {
-    display: none;
-}
-
 
 
 /* Regras Condicionais usando Media Queries */
@@ -308,10 +277,6 @@ article address {
     }
 }
 
-/* .fundo {
-    background-color: #000;
-} */
-
 .logo img {
     width: 90px;
     height: auto;
@@ -326,19 +291,6 @@ footer {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.col {
-    flex: 1;
-}
-
-.copyright {
-    text-align: center;
 }
 
 .texto-ilustrativo {
@@ -371,7 +323,7 @@ footer {
 }
 
 .banner {
-    background: linear-gradient(135deg, #222, #f9a825);
+    background: linear-gradient(17deg, #6F7991 0%,#101114 40%, #101114 50%, #6F7991 100%);
     /* Example colors: dark gray and gold */
     color: white;
     padding: 3rem 0;
@@ -397,13 +349,14 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
+ 
 
 .banner .button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #f9a825;
+    background-color: #070707;
     /* Gold button against dark background */
-    color: #222;
+    color: #f8f7f7;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -411,12 +364,13 @@ footer {
 }
 
 .banner .button:hover {
-    background-color: #e69100;
+    background-color: #fdfcfb;
+    color: #000;
     /* Slightly darker gold on hover */
 }
 
 .missao-container {
-    background-color: #a9a9a9;
+    background-color: #747373;
     padding: 50px;
     /* Adds padding around the container */
     /* border: 50px solid #fcfbfb; */
@@ -517,7 +471,7 @@ footer {
 }
 
 .cards-container {
-    background-image: url("../imagens/fundo-cards.jpg");
+    /* background-image: url("../imagens/fundo-cards.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -560,15 +514,81 @@ footer {
     background-color: var(--cor-escura);
     color: var(--cor-clara);
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 100px ;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    transform: scale(0.8);
+    transition: 0.5s;
+
+}
+.card button:hover {
+    transform: scale(1);
 }
 
 .card button:hover {
     background-color: #555555;
 }
 
+.fundo-card{
+    background-image: url("../imagens/fundo-cards.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 15px;
+    /* filter: grayscale(100%); */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.missao p{
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--cor-clara);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.client-comments {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Add padding as needed */
+}
+
+.comment-title  {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px;
+    font-family: "Sedan SC",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.comment-cards {
+    display: flex;
+    justify-content: space-around; /* Distribute cards evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    
+}
+
+.card {
+    border: 10px solid #f9f9f9; /* Black border */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px;
+    width: calc(50% - 30px); /* Two cards per row with margin */
+    margin: 15px; /* Spacing between cards */
+    box-sizing: border-box;
+       
+}
+
+.client-name {
+    color: #000;
+    font-style: italic;
+    text-align: right;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% - 30px); /* One card per row on smaller screens */
+    }
+}
 
 
