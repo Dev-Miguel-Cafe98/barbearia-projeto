@@ -707,3 +707,53 @@ p {
     color: var(--cor-clara);
     margin-top: 10px;
 } 
+.login-register-buttons {
+    display: flex; /* or inline-flex for horizontal alignment */
+    gap: 10px;      /* Adjust the spacing between buttons */
+    align-items: center; /* vertically align buttons */
+    justify-content: flex-end; /* align to the right */
+
+}
+
+.login-register-buttons .button {
+    /* Apply your button styles here */
+    font-weight: bold;
+    padding: 5px 12px;   
+    background-color: var(--cor-intermediaria); /* Example button background */
+    color: rgb(0, 0, 0);            /* Example button text color */
+    border: none;
+    border-radius: 5px;       /* Example button rounded corners */
+    text-decoration: none;  /* Remove underline from links */
+    cursor: pointer;
+}
+
+
+.login-register-buttons button:hover{
+    transform: scale(1.1);
+    
+}
+.login-register-buttons button:hover{
+    background-color: #4d4d4d;
+    color: white;
+    
+}
+
+/* .card button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    padding: 15px 100px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: scale(0.8);
+    transition: 0.5s;
+
+}
+
+.card button:hover {
+    transform: scale(1);
+}
+
+.card button:hover {
+    background-color: #555555; */

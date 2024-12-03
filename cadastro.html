@@ -1,52 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Barbearia TWO BROTHERS</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header class="topo">
-        <div class="limitador">
-            <h1 class="titulo"><img src="imagens/2_irmãos-removebg-preview.png" alt=""></a></h1>
-            <nav class="menu">
-                <h2 class="titulo-menu"><a href="">Menu &equiv; </a></h2>
-                <ul class="links-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form id="registrationForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="confirmPassword">Confirmar Senha:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+    <p>Já tem uma conta? <a href="login.html">Faça login aqui</a>.</p>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
 
-    <main class="conteudo">
-        <section class="cadastro-container">
-            <h2>Cadastro</h2>
-            <form action="#" method="post">
-                <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" required>
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        // Basic validation
+        if (password !== confirmPassword) {
+            alert('Senhas não conferem!');
+            return;
+        }
 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+        // Placeholder for further actions (e.g., sending data to server)
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Password:', password);
 
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-
-                <label for="confirmar-senha">Confirmar senha:</label>
-                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
-
-                <button type="submit">Cadastrar</button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="rodape">
-        <article class="contact-info ">
+        // Optionally, redirect to another page after successful registration
+        // window.location.href = 'login.html'; 
+    });
+</script>
