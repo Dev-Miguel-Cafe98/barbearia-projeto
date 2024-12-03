@@ -13,14 +13,14 @@
 <body>
     <header class="topo">
         <div class="limitador">
-            <h1 class="titulo"><img src="imagens/2_irmãos-removebg-preview.png" alt=""></a></h1>
+            <h1 class="titulo"><img src="imagens/2_irmãos-removebg-preview.png" alt=""></h1>
             <nav class="menu">
                 <h2 class="titulo-menu"><a href="">Menu &equiv; </a></h2>
                 <ul class="links-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="produtos.php">Produtos</a></li>
+                    <li><a href="servicos.php">Serviços</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,30 +44,28 @@
             </article>
         </div>
         <article class="fundo-card  ">
-            <section class="servicos limitador"> <!-- Use <section> instead of <div> -->
+            <section class="servicos limitador"> 
                 <h2>Nossos Serviços</h2>
 
                 <div class="cards-container">
 
-                    <article class="card">
-                        <img src="imagens/corte.jpg" alt="Corte Moderno">
-                        <h3>Corte Moderno</h3>
-                        <p>R$ 30,00</p>
-                        <button>Agendar horário</button>
-                    </article>
-                    <article class="card ">
-                        <img src="imagens/corte-barba.jpg" alt="Corte Clássico">
-                        <h3>Corte + Barba</h3>
-                        <p>R$ 40,00</p>
-                        <button>Agendar horário</button>
-                    </article>
-                    <article class="card">
-                        <img src="imagens/barba.jpg" alt="Barba">
-                        <h3>Barba</h3>
-                        <p>R$ 30,00</p>
-                        <button>Agendar horário</button>
-                    </article>
-                    <!-- Add more cards as needed -->
+                    <?php
+                    $servicos = array(
+                        array("imagem" => "imagens/corte.jpg", "titulo" => "Corte Moderno", "preco" => "R$ 30,00"),
+                        array("imagem" => "imagens/corte-barba.jpg", "titulo" => "Corte + Barba", "preco" => "R$ 40,00"),
+                        array("imagem" => "imagens/barba.jpg", "titulo" => "Barba", "preco" => "R$ 30,00")
+                        // Add more services as needed
+                    );
+
+                    foreach ($servicos as $servico) {
+                        echo '<article class="card">';
+                        echo '<img src="' . $servico['imagem'] . '" alt="' . $servico['titulo'] . '">';
+                        echo '<h3>' . $servico['titulo'] . '</h3>';
+                        echo '<p>' . $servico['preco'] . '</p>';
+                        echo '<button>Agendar horário</button>';
+                        echo '</article>';
+                    }
+                    ?>
                 </div>
             </section>
         </article>
@@ -75,22 +73,40 @@
         <section class="client-comments">
             <h2 class="comment-title">Comentários do Cliente</h2>
             <div class="comment-cards">
-                <article class="card">
-                    <p style="color: black;">"Experiência incrível na #BarbeariaTwoBrothers! O @BarberIgor me deixou com
+            <?php
+            $comentarios = array(
+                array(
+                    "texto" => '"Experiência incrível na #BarbeariaTwoBrothers! O @BarberIgor me deixou com
                         um visual totalmente novo e me deu várias dicas de como cuidar do meu cabelo. Com certeza
-                        voltarei mais vezes."</p>
-                    <p class="client-name">@Carlos Souza</p>
-                    <p class="hashtags">#Corte#Barba#Sobrancelha</p>
-                </article>
-                <article class="card">
-                    <p style="color: black;">"O atendimento da #BarbeariaTwoBrothers é simplesmente impecável! Os
+                        voltarei mais vezes."',
+                    "nome" => "@Carlos Souza",
+                    "hashtags" => "#Corte#Barba#Sobrancelha"
+                ),
+                array(
+                    "texto" => '"O atendimento da #BarbeariaTwoBrothers é simplesmente impecável! Os
                         barbeiros são super atenciosos e fazem a gente se sentir em casa. Além disso, a experiência
-                        completa, com um cafézinho e boa música, é o toque final perfeito!"</p>
-                    <p class="client-name">@Bruno Henrique</p>
-                    <p class="hashtags">#Corte#Barba</p>
-                </article>
+                        completa, com um cafézinho e boa música, é o toque final perfeito!"',
+                    "nome" => "@Bruno Henrique",
+                    "hashtags" => "#Corte#Barba"
+                )
+                 // Add more comments as needed
+            );
+
+
+            foreach ($comentarios as $comentario) {
+                echo '<article class="card">';
+                echo '<p style="color: black;">' . $comentario['texto'] . '</p>';
+                echo '<p class="client-name">' . $comentario['nome'] . '</p>';
+                echo '<p class="hashtags">' . $comentario['hashtags']. '</p>';
+                echo '</article>';
+
+            }
+
+            ?>
+
             </div>
         </section>
+
 
 
         <article class="rodape-container limitador ">
@@ -119,10 +135,10 @@
             <p>Rua César Marengo, 325 - Campo Grande, São Paulo - SP, 04455-220</p>
             <p>Telefone: (11) 96186-8302</p>
             <p class="copyright">&copy; 2024 Barbearia Two Brothers. Todos os direitos reservados.</p>
-            
+
         </article>
 
-        
+
 
         <div class="social-media">
             <a href=""><wow-image id="img_comp-lf9wa09n" class="HlRz5e BI8PVQ"
@@ -141,3 +157,4 @@
 </body>
 
 </html>
+
