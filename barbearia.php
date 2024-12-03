@@ -138,15 +138,14 @@
 
         </article>
 
-
-
+            
         <div class="social-media">
             <a href=""><wow-image id="img_comp-lf9wa09n" class="HlRz5e BI8PVQ"
                     data-image-info="{&quot;containerId&quot;:&quot;comp-lf9wa09n&quot;,&quot;displayMode&quot;:&quot;fill&quot;,&quot;targetWidth&quot;:71,&quot;targetHeight&quot;:66,&quot;isLQIP&quot;:false,&quot;encoding&quot;:&quot;AVIF&quot;,&quot;imageData&quot;:{&quot;width&quot;:400,&quot;height&quot;:400,&quot;uri&quot;:&quot;fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif&quot;,&quot;name&quot;:&quot;372108180_WHATSAPP_ICON_400.gif&quot;,&quot;displayMode&quot;:&quot;fill&quot;}}"
                     data-motion-part="BG_IMG" data-bg-effect-name="" data-has-ssr-src=""
                     style="--wix-img-max-width:max(400px, 100%)"><img
                         src="https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif"
-                        alt="Whatsapp Barbearia Tarantino" style="width:71px;height:66px;object-fit:cover" width="71"
+                        alt="Whatsapp Barbearia Two Brothers" style="width:71px;height:66px;object-fit:cover" width="71"
                         height="66"
                         srcset="https://https://static.wixstatic.com.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 1x, https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 2x"
                         fetchpriority="low" loading="lazy" decoding="async"></wow-image></a>
