@@ -1,24 +1,64 @@
-
 document.getElementById('registrationForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Impede que o formulário seja enviado normalmente
+    event.preventDefault(); 
 
-    // Obtenha valores de formulário
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
-    // Validação básica
     if (password !== confirmPassword) {
         alert('Senhas não conferem!');
         return;
     }
 
-    // Espaço reservado para ações adicionais (por exemplo, envio de dados ao servidor)
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Password:', password);
+    const userData = { name, email, password };
+    fetch('register.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'login.html';
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao registrar:', error);
+        alert('Erro ao registrar. Por favor, tente novamente mais tarde.');
+    });
+});
 
-    // Opcionalmente, redirecione para outra página após o registro bem-sucedido
-    // window.location.href = 'login.html';
+const form = document.getElementById('loginForm');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const userData = { email, password };
+    fetch('login.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Login realizado com sucesso!');
+            window.location.href = 'home.html'; 
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao logar:', error);
+        alert('Erro ao logar. Por favor, tente novamente mais tarde.');
+    });
 });

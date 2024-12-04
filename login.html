@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="background-image: url('imagens/fundo-cadastro-login.jpg'); background-size: cover; background-repeat: no-repeat;">
+<body class="login-page">
 
+    <header>
+        <nav class="menu-login">
+            <a href="index.html">Home</a>
+        </nav>
+        <div class="container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-    <div class="container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
 
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
 
-            <button type="submit">Entrar</button>
-            <button type="reset">Limpar</button>
-        </form>
-        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>.</p>
-    </div>
+            </form>
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>.</p>
+        </div>
+    </header>
 
-    <script src="js/login.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
