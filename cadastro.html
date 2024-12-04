@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
+    
+    <section><img src="imagens/fundo-cadastro-login.gif" alt=""></section>    <script src="js/script.js"></script>
+    sele
     <div class="container">
         <h1>Cadastro</h1>
         <form id="registrationForm">
@@ -19,37 +22,11 @@
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
         
-        <label for="confirmPassword">Confirmar Senha:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-        
         <button type="submit">Cadastrar</button>
     </form>
     <p>Já tem uma conta? <a href="login.html">Faça login aqui</a>.</p>
     </div>
+
+    <script src="js/cadastro.js"></script>
 </body>
 </html>
-<script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form from submitting normally
-
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-
-        // Basic validation
-        if (password !== confirmPassword) {
-            alert('Senhas não conferem!');
-            return;
-        }
-
-        // Placeholder for further actions (e.g., sending data to server)
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Password:', password);
-
-        // Optionally, redirect to another page after successful registration
-        // window.location.href = 'login.html'; 
-    });
-</script>

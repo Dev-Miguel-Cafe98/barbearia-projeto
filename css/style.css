@@ -738,22 +738,30 @@ p {
     
 }
 
-/* .card button {
-    background-color: var(--cor-escura);
-    color: var(--cor-clara);
-    border: none;
-    padding: 15px 100px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    transform: scale(0.8);
-    transition: 0.5s;
-
-}
-
-.card button:hover {
-    transform: scale(1);
-}
-
-.card button:hover {
-    background-color: #555555; */
+.container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure container takes full viewport height */
+  }
+  
+  #loginForm {
+    display: flex;
+    flex-direction: column; /* Align form elements vertically */
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  #loginForm label, #loginForm input, #loginForm button {
+    margin-bottom: 10px; /* Add spacing between form elements */
+    width: 100%; /* Make inputs and button full width of the form */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  
+  }
+  
+  
+  #loginForm button {
+      padding: 10px;
+  
+  }
+  

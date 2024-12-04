@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure container takes full viewport height */
+  }
+  
+  #registrationForm {
+    display: flex;
+    flex-direction: column; /* Align form elements vertically */
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  #registrationForm label, #registrationForm input, #registrationForm button {
+    margin-bottom: 10px; /* Add spacing between form elements */
+    width: 100%; /* Make inputs and button full width of the form */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  #registrationForm button {
+    padding: 10px;
+  }
+  
+  
