@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,10 +18,10 @@
             <nav class="menu">
                 <h2 class="titulo-menu"><a href="">Menu &equiv; </a></h2>
                 <ul class="links-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="produtos.php">Produtos</a></li>
+                    <li><a href="servicos.php">Serviços</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,8 +30,8 @@
             <section class="login-register">
                 <div class="login">
                     <div class="login-register-buttons">
-                        <a href="login.html" class="button">Login</a>
-                        <a href="cadastro.html" class="button">Registrar</a>
+                        <a href="login.php" class="button">Login</a>
+                        <a href="cadastro.php" class="button">Registrar</a>
                     </div>
                 </div>    
             </section>
@@ -42,7 +43,7 @@
             <div class="banner-content destaque ">
                 <h2>Bem-vindo à Barbearia Two Brothers</h2>
                 <p>Seu estilo, nossa paixão.</p>
-                <a href="#" class="button ">Agende seu horário</a>
+                <a href="login.php" class="button ">Agende seu horário</a>
             </div>
         </article>
 
