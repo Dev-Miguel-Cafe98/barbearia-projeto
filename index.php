@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,7 +7,6 @@
     <title>Barbearia TWO BROTHERS</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -33,7 +31,7 @@
                         <a href="login.php" class="button">Login</a>
                         <a href="cadastro.php" class="button">Registrar</a>
                     </div>
-                </div>    
+                </div>
             </section>
         </article>
     </header>
@@ -65,31 +63,32 @@
                         <img src="imagens/corte.jpg" alt="Corte Masculino">
                         <h3>Corte Masculino</h3>
                         <p>R$ 30,00</p>
-                        <button>Agendar horário</button>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+                        
                     </article>
                     <article class="card ">
                         <img src="imagens/corte-barba.jpg" alt="Corte + Barba">
                         <h3>Corte + Barba</h3>
                         <p>R$ 40,00</p>
-                        <button>Agendar horário</button>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
                     </article>
                     <article class="card">
                         <img src="imagens/barba.jpg" alt="Barba">
                         <h3>Barba</h3>
                         <p>R$ 15,00</p>
-                        <button>Agendar horário</button>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
                     </article>
                     <article class="card">
                         <img src="imagens/design mais barba.jpg" alt="Barba + Design">
                         <h3>Barba + Design</h3>
                         <p>R$ 25,00</p>
-                        <button>Agendar horário</button>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
                     </article>
                     <article class="card">
                         <img src="imagens/limpeza de sobrancelha.jpg" alt="Limpeza Sobrancelha">
                         <h3>Limpeza Sobrancelha</h3>
                         <p>R$ 15,00</p>
-                        <button>Agendar horário</button>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
                     </article>
                     <!-- Add more cards as needed -->
                 </div>
@@ -166,6 +165,11 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script>
+        function redirectToLogin() {
+            window.location.href = 'login.php'; // Substitua pelo caminho da sua página de login
+        }
+    </script>
 </body>
 
 </html>

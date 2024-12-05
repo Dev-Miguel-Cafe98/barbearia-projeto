@@ -1,22 +1,24 @@
 <?php
-require 'funcoes.php';
+require 'conecta.php';
 
-if(isset($_POST['cadastrar'])){
-	//Capturar os dados digitados
-	$nome = $_POST['name'];
-	$email = $_POST['email'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash da senha
 
-	
-	// Capturando a senha e a codificando
-	$senha = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    // **Atenção:** Essa abordagem é altamente vulnerável a injeção de SQL!
+    // **Somente use em casos muito específicos e com extrema cautela.**
+    $sql = "INSERT INTO clientes (nome, email, senha) VALUES ('$name', '$email', '$password')";
 
-	//Executando a funcao inserirUsuario
-	inserirUsuario($conexao, $nome, $email, $senha);
-
-	//Redirecionamento
-
-	header("location:login.php");
+    if (mysqli_query($conexao, $sql)) {
+        echo "Cadastro realizado com sucesso!";
+        header("Location: login.php");
+        exit();
+    } else {
+        echo "Erro ao cadastrar: " . mysqli_error($conn);
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -26,8 +28,6 @@ if(isset($_POST['cadastrar'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/cadastro.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@ if(isset($_POST['cadastrar'])){
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="submit" name="cadastrar">Cadastrar</button>
+                <button type="submit">Cadastrar</button>
             </form>
             <p>Já tem uma conta? <a href="login.php">Faça login aqui</a>.</p>
         </div>
