@@ -1,17 +1,25 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $corte = $_POST['corte'];
-    $data = $_POST['data'];
-    $hora = $_POST['hora'];
+// ... (código existente)
 
-    // Aqui você pode adicionar a lógica para salvar os dados em um banco de dados ou enviar um e-mail
-
-    echo "Agendamento realizado com sucesso!<br>";
-    echo "Corte: " . htmlspecialchars($corte) . "<br>";
-    echo "Data: " . htmlspecialchars($data) . "<br>";
-    echo "Hora: " . htmlspecialchars($hora) . "<br>";
+// Validação básica (adicione mais validações conforme necessário)
+if (empty($_POST['servicos']) || empty($_POST['data_agendamento']) || empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['telefone']) || empty($_POST['endereco']) || empty($_POST['email']) ||  empty($_POST['barbeiro']) || empty($_POST['status']) || empty($_POST['preco']) || empty($_POST['forma_pagamento']) || empty($_POST['valor_total']) ||) { 
+    echo "Por favor, preencha todos os campos.";
+    exit;
 }
+
+// Verificação da data (exemplo básico)
+$dataAgendamento = strtotime($_POST['data']);
+if ($dataAgendamento <= time()) {
+    echo "A data escolhida não é válida.";
+    exit;
+}
+
+// ... (resto do código)
+
+// Salvar no banco de dados (exemplo com prepared statement)
+$stmt = $pdo->prepare("INSERT INTO agendamentos (corte, data, hora) VALUES (?, ?, ?)");
+$stmt->execute([$corte, $data, $hora]);
 ?>
 
 
