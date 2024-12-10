@@ -1,45 +1,37 @@
-#comp-k5cws23b form div { /* Targets the divs inside form now. */
+#comp-k5cws23b form div { 
     display: block; 
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
 }
 
-#comp-k5cws23b input[type="text"],  /* Targets all text inputs */
-#comp-k5cws23b input[type="email"], /* Targets email input */
-#comp-k5cws23b input[type="tel"],  /* Targets telephone input */
-#comp-k5cws23b textarea {       /* Targets textarea */
-   width: 50%;
+#comp-k5cws23b input[type="text"],  
+#comp-k5cws23b input[type="email"], 
+#comp-k5cws23b input[type="tel"],  
+#comp-k5cws23b textarea {       
+   width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    
-
-   
-   ;  /* Ensures full width */
 }
 
 #comp-k5cws23b button {
-    width: auto; /* Keep button at its default width */
+    width: 100%; 
 }
 
-/* Other styles as needed... */
-
-/* Target the container div more specifically */
 #comp-k5cws23b {
-    width: 100%; /* ensures the container takes full width */
+    width: 100%; 
     box-sizing: border-box;
 }
 
-#comp-k5cws23b form {  /* Target the form directly */
+#comp-k5cws23b form {  
     display: flex;
-    flex-direction: column;  /* Stack elements vertically */
-    width: 50%;   /* Adjust width as needed */
-    margin: 0 auto; /* Center the form */
-    max-width: 600px; /* Prevents the form from getting too wide */
-
+    flex-direction: column;  
+    width: 50%;   
+    margin: 0 auto; 
+    max-width: 600px; 
 
 }
 
@@ -49,42 +41,46 @@
     box-sizing: border-box;
 }
 
-
-#comp-k5cws23b input,  /*  Simplified: all input types  */
+#comp-k5cws23b input,  
 #comp-k5cws23b textarea,
 #comp-k5cws23b button {
-    width: 100%; /* Takes full width of its parent (the div). */
+    width: 100%; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-
 }
-
-#comp-k5cws236 {
-    text-align: center; /* Centers the text within the div */
-    margin-bottom: 20px; /* Adds some space below the heading (optional) */
-    line-height: 1.5;
-}
-
-/* ... other styles ...*/
 
 #comp-k5cws23b select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;  /* Consistent spacing */
+    margin-bottom: 10px;  
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    appearance: none; /* Improves cross-browser styling */
-    -webkit-appearance: none; /* For Safari and older Chrome */
-    -moz-appearance: none;    /* For Firefox */
-    background-color: #fff; /* Or match your form background */
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    background-color: #fff; 
 
 }
 
+#comp-k5cws23b {  
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
 
+}
 
-
-
-
+#comp-k5cws23b form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
