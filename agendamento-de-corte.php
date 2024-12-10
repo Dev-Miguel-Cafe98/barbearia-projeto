@@ -1,26 +1,41 @@
 <?php
+if (isset($_POST['nome']) && !empty($_POST['nome']) &&
+    // ... outras validações
+    isset($_POST['hora']) && !empty($_POST['hora'])) {
 
-// ... (código existente)
+    // Validação da data
+    $dataAgendamento = DateTime::createFromFormat('Y-m-d', $_POST['data']);
+    if ($dataAgendamento === false || $dataAgendamento->getTimestamp() <= time()) {
+        echo "A data escolhida não é válida ou já passou.";
+        exit;
+    }
 
-// Validação básica (adicione mais validações conforme necessário)
-if (empty($_POST['servicos']) || empty($_POST['data_agendamento']) || empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['telefone']) || empty($_POST['endereco']) || empty($_POST['email']) ||  empty($_POST['barbeiro']) || empty($_POST['status']) || empty($_POST['preco']) || empty($_POST['forma_pagamento']) || empty($_POST['valor_total'])) { 
-    echo "Por favor, preencha todos os campos.";
-    exit;
+    // Conexão com o banco de dados (ajuste as credenciais)
+    $host = "localhost";
+    $dbname = "meu_banco";
+    $user = "meu_usuario";
+    $password = "minha_senha";
+
+    try {
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        // Preparar e executar a consulta
+        $stmt = $pdo->prepare("INSERT INTO agendamentos (corte, data, hora, dataAgendamento) VALUES (?, ?, ?, ?)");
+        $timestamp = $dataAgendamento->getTimestamp();
+        $stmt->execute([$_POST['corte'], $_POST['data'], $_POST['hora'], $timestamp]);
+
+        echo "Agendamento realizado com sucesso!";
+    } catch(PDOException $e) {
+        echo "Erro: " . $e->getMessage();
+    }
+} else {
+    echo "Por favor, preencha todos os campos obrigatórios.";
 }
 
-// Verificação da data (exemplo básico)
-$dataAgendamento = strtotime($_POST['data']);
-if ($dataAgendamento <= time()) {
-    echo "A data escolhida não é válida.";
-    exit;
-}
 
-// ... (resto do código)
-
-// Salvar no banco de dados (exemplo com prepared statement)
-$stmt = $pdo->prepare("INSERT INTO agendamentos (corte, data, hora) VALUES (?, ?, ?)");
-$stmt->execute([$corte, $data, $hora]);
 ?>
+
 
 
 <!DOCTYPE html>
@@ -35,24 +50,20 @@ $stmt->execute([$corte, $data, $hora]);
     <div class="container">
         <h1>Agende seu Corte de Cabelo</h1>
         <form action="processa_agendamento.php" method="POST">
-            <label for="corte">Escolha o tipo de corte:</label>
-            <select id="corte" name="corte" required>
-                <option value="">Selecione um corte</option>
-                <option value="corte1">Corte Masculino</option>
-                <option value="corte2">Corte + Barba</option>
-                <option value="corte3">Barba</option>
-                <option value="corte4">Barba + Design</option>
-                <option value="corte5">Corte Infantil</option>
-            </select>
+    <label for="servicos">Serviços:</label>
+    <textarea id="servicos" name="servicos" required></textarea>
 
-            <label for="data">Escolha a data:</label>
-            <input type="date" id="data" name="data" required>
+    <label for="barbeiro">Barbeiro:</label>
+    <select id="barbeiro" name="barbeiro" required>
+        </select>
 
-            <label for="hora">Escolha a hora:</label>
-            <input type="time" id="hora" name="hora" required>
+    <label for="forma_pagamento">Forma de pagamento:</label>
+    <select id="forma_pagamento" name="forma_pagamento" required>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="cartao">Cartão</option>
+        </select>
 
-            <button type="submit">Agendar</button>
-        </form>
+    </form>
     </div>
 </body>
 </html>
