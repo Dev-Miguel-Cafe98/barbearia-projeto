@@ -1,81 +1,90 @@
-/* contato.css */
-
-#comp-k5cws236 h1 {
-    font-size: 62px;
-    line-height: 0.9em;
+#comp-k5cws23b form div { /* Targets the divs inside form now. */
+    display: block; 
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-#comp-k5cws236 h1 span {
-    color: #222222;
-    font-family: wfont_ab76ba_def3430855f6447eb5a0e3279decb8e3, wf_def3430855f6447eb5a0e3279, orig_akzidenzgroteskbecn;
-    letter-spacing: 0em;
-    /*  Redundante, pois 0em é o padrão */
-    font-size: 62px;
-    /* Redundante, já definido no h1 */
+#comp-k5cws23b input[type="text"],  /* Targets all text inputs */
+#comp-k5cws23b input[type="email"], /* Targets email input */
+#comp-k5cws23b input[type="tel"],  /* Targets telephone input */
+#comp-k5cws23b textarea {       /* Targets textarea */
+   width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+
+   
+   ;  /* Ensures full width */
 }
 
-/* #comp-k5cws23b {
-   /* Estilos para o container do formulário, se necessário  */
-
-
-   /* Seletor agrupado para inputs de texto */
-/* #comp-kegqxf57 .MpKiNN input,  
-#comp-kegqxf5m1 textarea  */
-    /* Estilos para a textarea */
-    /* Estilos comuns aos inputs e textarea
-
-
-
-/* #comp-kegqxf5b input[type="text"] {
-   /*  Estilos específicos para o input de nome */
-
-
-
-/* #comp-kegqxf5e input[type="tel"] {
-   /* Estilos específicos para o input de telefone */
-
-
-/* #comp-kegqxf5h input[type="email"] {
-    /* Estilos específicos para o input de email */
-
-/* #comp-kegqxf5j2 input[type="text"] {
-    /* Estilos específicos para o input de assunto */
-
-
-
-/* #comp-kegqxf5m1  {
-   /* Estilos específicos para o container da textarea, se necessário */
-
-
-/* #comp-kegqxf5p1 button {
-   Estilos para o botão */
-
-
-/* #comp-kegqxf5p1 button span {
-   Estilos para o texto do botão */
-
-
-#comp-kegqxf5s1 p {
-    font-size: 14px;
-    text-align: center;
+#comp-k5cws23b button {
+    width: auto; /* Keep button at its default width */
 }
 
-#comp-kegqxf5s1 p span {
-    color: #68B04D;
-    font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
-    font-size: 14px;
-    /* Redundante, já definido no p */
+/* Other styles as needed... */
+
+/* Target the container div more specifically */
+#comp-k5cws23b {
+    width: 100%; /* ensures the container takes full width */
+    box-sizing: border-box;
+}
+
+#comp-k5cws23b form {  /* Target the form directly */
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+    width: 50%;   /* Adjust width as needed */
+    margin: 0 auto; /* Center the form */
+    max-width: 600px; /* Prevents the form from getting too wide */
+
+
+}
+
+#comp-k5cws23b form div {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
-/*  Classes Wix  */
+#comp-k5cws23b input,  /*  Simplified: all input types  */
+#comp-k5cws23b textarea,
+#comp-k5cws23b button {
+    width: 100%; /* Takes full width of its parent (the div). */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 
-/* .HcOXKn, .SxM0TO, .QxJLC3, .lq2cno, .wixui-rich-text,
-.bkIuWA, .JVi7i2,  .wixui-form, .MpKiNN, .wixui-text-input,
-.lPl_oN, .LyB02C, .pUnTVX, .KvoMHf, .has-custom-focus, .wixui-text-input__input,
-.snt4Te, .wixui-text-box, .pOExcs, .PSkPrR, .wixui-text-box__label,
-.rEindN, .wixui-text-box__input, .FubTgk, .uDW_Qe, .wixui-button, .PlZyDq,
-.l7_2fn, .wixui-button__label
-{
-    /*  Estilos para classes Wix, se necessário.  */
-/*  Cuidado ao estilizar classes Wix, pois podem afetar outros elementos. */
+}
+
+#comp-k5cws236 {
+    text-align: center; /* Centers the text within the div */
+    margin-bottom: 20px; /* Adds some space below the heading (optional) */
+    line-height: 1.5;
+}
+
+/* ... other styles ...*/
+
+#comp-k5cws23b select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;  /* Consistent spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    appearance: none; /* Improves cross-browser styling */
+    -webkit-appearance: none; /* For Safari and older Chrome */
+    -moz-appearance: none;    /* For Firefox */
+    background-color: #fff; /* Or match your form background */
+
+}
+
+
+
+
+
+

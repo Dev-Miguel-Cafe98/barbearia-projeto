@@ -34,7 +34,7 @@
                 <button type="submit">Entrar</button>
 
             </form>
-            <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se aqui</a>.</p>
+
         </div>
     </header>
 
