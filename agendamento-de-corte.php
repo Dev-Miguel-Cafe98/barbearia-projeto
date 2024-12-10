@@ -3,7 +3,7 @@
 // ... (código existente)
 
 // Validação básica (adicione mais validações conforme necessário)
-if (empty($_POST['servicos']) || empty($_POST['data_agendamento']) || empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['telefone']) || empty($_POST['endereco']) || empty($_POST['email']) ||  empty($_POST['barbeiro']) || empty($_POST['status']) || empty($_POST['preco']) || empty($_POST['forma_pagamento']) || empty($_POST['valor_total']) ||) { 
+if (empty($_POST['servicos']) || empty($_POST['data_agendamento']) || empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['telefone']) || empty($_POST['endereco']) || empty($_POST['email']) ||  empty($_POST['barbeiro']) || empty($_POST['status']) || empty($_POST['preco']) || empty($_POST['forma_pagamento']) || empty($_POST['valor_total'])) { 
     echo "Por favor, preencha todos os campos.";
     exit;
 }
