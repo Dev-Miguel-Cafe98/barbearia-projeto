@@ -64,7 +64,7 @@ a {
 }
 
 /* Cabeçalho/Topo "cheio", ou seja, pegando 100% da tela/fixado. */
-.topo {
+.topo  {
     position: sticky;
     top: 0;
     background: linear-gradient(to right, #030303 0%, #101114 55%, #6F7991 100%);
@@ -97,7 +97,7 @@ aplicamos os ajustes de layout (flex) */
     /* background-color: yellow; */
 }
 
-.titulo-menu a {
+.titulo-menu a .lb-nav a {
     color: var(--cor-escura);
     font-size: 1.2rem;
     padding: 1rem;
@@ -350,6 +350,7 @@ footer {
     /* Smooth transition for hover effect */
 }
 
+
 .banner .button:hover {
     background-color: hsl(0, 0%, 100%);
     color: #090909;
@@ -401,6 +402,23 @@ footer {
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.card .button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #0a0a0a;
+    /* Gold button against dark background */
+    color: #f8f7f7;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+} 
+
+.card  .button:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: #090909;
+    /* Slightly darker gold on hover */
 }
 
 .card h3 {
@@ -707,3 +725,61 @@ p {
     color: var(--cor-clara);
     margin-top: 10px;
 } 
+.login-register-buttons {
+    display: flex; /* or inline-flex for horizontal alignment */
+    gap: 10px;      /* Adjust the spacing between buttons */
+    align-items: center; /* vertically align buttons */
+    justify-content: flex-end; /* align to the right */
+
+}
+
+.login-register-buttons .button {
+    /* Apply your button styles here */
+    font-weight: bold;
+    padding: 5px 12px;   
+    background-color: var(--cor-intermediaria); /* Example button background */
+    color: rgb(0, 0, 0);            /* Example button text color */
+    border: none;
+    border-radius: 5px;       /* Example button rounded corners */
+    text-decoration: none;  /* Remove underline from links */
+    cursor: pointer;
+}
+
+
+.login-register-buttons button:hover{
+    transform: scale(1.1);
+    
+}
+.login-register-buttons button:hover{
+    background-color: #4d4d4d;
+    color: white;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure container takes full viewport height */
+  }
+  
+  #loginForm {
+    display: flex;
+    flex-direction: column; /* Align form elements vertically */
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  #loginForm label, #loginForm input, #loginForm button {
+    margin-bottom: 10px; /* Add spacing between form elements */
+    width: 100%; /* Make inputs and button full width of the form */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  
+  }
+  
+  
+  #loginForm button {
+      padding: 10px;
+  
+  }
+  

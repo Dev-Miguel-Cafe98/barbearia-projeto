@@ -7,7 +7,6 @@
     <title>Barbearia TWO BROTHERS</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -17,21 +16,35 @@
             <nav class="menu">
                 <h2 class="titulo-menu"><a href="">Menu &equiv; </a></h2>
                 <ul class="links-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="produtos.php">Produtos</a></li>
+                    <li><a href="servicos.php">Serviços</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                 </ul>
             </nav>
         </div>
+        <article>
+
+            <section class="login-register">
+                <div class="login">
+                    <div class="login-register-buttons">
+                        <a href="login.php" class="button">Login</a>
+                    </div>
+                </div>
+            </section>
+        </article>
     </header>
+
+
+
+    </main>
 
     <main class="conteudo">
         <article class="banner">
             <div class="banner-content destaque ">
                 <h2>Bem-vindo à Barbearia Two Brothers</h2>
                 <p>Seu estilo, nossa paixão.</p>
-                <a href="#" class="button ">Agende seu horário</a>
+                <a href="login.php" class="button ">Agende seu horário</a>
             </div>
         </article>
 
@@ -50,22 +63,35 @@
                 <div class="cards-container">
 
                     <article class="card">
-                        <img src="imagens/corte.jpg" alt="Corte Moderno">
-                        <h3>Corte Moderno</h3>
+                        <img src="imagens/corte.jpg" alt="Corte Masculino">
+                        <h3>Corte Masculino</h3>
                         <p>R$ 30,00</p>
-                        <button>Agendar horário</button>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+
                     </article>
                     <article class="card ">
-                        <img src="imagens/corte-barba.jpg" alt="Corte Clássico">
+                        <img src="imagens/corte-barba.jpg" alt="Corte + Barba">
                         <h3>Corte + Barba</h3>
                         <p>R$ 40,00</p>
-                        <button>Agendar horário</button>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
                     </article>
                     <article class="card">
                         <img src="imagens/barba.jpg" alt="Barba">
                         <h3>Barba</h3>
-                        <p>R$ 30,00</p>
-                        <button>Agendar horário</button>
+                        <p>R$ 15,00</p>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+                    </article>
+                    <article class="card">
+                        <img src="imagens/design mais barba.jpg" alt="Barba + Design">
+                        <h3>Barba + Design</h3>
+                        <p>R$ 25,00</p>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+                    </article>
+                    <article class="card">
+                        <img src="imagens/limpeza de sobrancelha.jpg" alt="Limpeza Sobrancelha">
+                        <h3>Limpeza Sobrancelha</h3>
+                        <p>R$ 15,00</p>
+                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
                     </article>
                     <!-- Add more cards as needed -->
                 </div>
@@ -83,7 +109,7 @@
                     <p class="hashtags">#Corte#Barba#Sobrancelha</p>
                 </article>
                 <article class="card">
-                    
+
                     <p style="color: black;">"O atendimento da #BarbeariaTwoBrothers é simplesmente impecável! Os
                         barbeiros são super atenciosos e fazem a gente se sentir em casa. Além disso, a experiência
                         completa, com um cafézinho e boa música, é o toque final perfeito!"</p>
@@ -112,6 +138,10 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
+        <?php
+        require 'contato.php';
+
+        ?>
     </main>
 
     <footer class="rodape">
@@ -120,25 +150,33 @@
             <p>Rua César Marengo, 325 - Campo Grande, São Paulo - SP, 04455-220</p>
             <p>Telefone: (11) 96186-8302</p>
             <p class="copyright">&copy; 2024 Barbearia Two Brothers. Todos os direitos reservados.</p>
-            
+
         </article>
 
-        
+
 
         <div class="social-media">
-            <a href=""><wow-image id="img_comp-lf9wa09n" class="HlRz5e BI8PVQ"
+            <a data-testid="linkElement" href="https://api.whatsapp.com/send?phone=5511961868302" target="_blank"
+                rel="noreferrer noopener" class="j7pOnl"><wow-image id="img_comp-lf9wa09n" class="HlRz5e BI8PVQ"
                     data-image-info="{&quot;containerId&quot;:&quot;comp-lf9wa09n&quot;,&quot;displayMode&quot;:&quot;fill&quot;,&quot;targetWidth&quot;:71,&quot;targetHeight&quot;:66,&quot;isLQIP&quot;:false,&quot;encoding&quot;:&quot;AVIF&quot;,&quot;imageData&quot;:{&quot;width&quot;:400,&quot;height&quot;:400,&quot;uri&quot;:&quot;fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif&quot;,&quot;name&quot;:&quot;372108180_WHATSAPP_ICON_400.gif&quot;,&quot;displayMode&quot;:&quot;fill&quot;}}"
                     data-motion-part="BG_IMG" data-bg-effect-name="" data-has-ssr-src=""
                     style="--wix-img-max-width:max(400px, 100%)"><img
                         src="https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif"
-                        alt="Whatsapp Barbearia Tarantino" style="width:71px;height:66px;object-fit:cover" width="71"
-                        height="66"
-                        srcset="https://https://static.wixstatic.com.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 1x, https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 2x"
+                        alt="Whatsapp #BarbeariaTwoBrothers" title="Whatsapp #BarbeariaTwoBrothers" loading="lazy"
+                        decoding="async" style="width:71px;height:66px;object-fit:cover" width="71" height="66"
+                        srcset="https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 1x, https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 2x"
                         fetchpriority="low" loading="lazy" decoding="async"></wow-image></a>
         </div>
+
+
     </footer>
 
     <script src="js/menu.js"></script>
+    <script>
+        function redirectToLogin() {
+            window.location.href = 'login.php'; // Substitua pelo caminho da sua página de login
+        }
+    </script>
 </body>
 
 </html>
