@@ -1,11 +1,10 @@
-
 <?php
+require 'funcoes.php';
 $successMessage = "";
 if (isset($_GET['success']) && $_GET['success'] == 1) {
     $successMessage = "<p style='color: green;'>Sua mensagem foi enviada com sucesso!</p>";
 }
 
-require 'funcoes.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
@@ -24,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">

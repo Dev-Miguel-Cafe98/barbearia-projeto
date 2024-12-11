@@ -22,3 +22,10 @@ function inserirUsuario($conexao, $nome, $telefone, $email, $servicos, $mensagem
 
     executarQuery($conexao, $sql);
 }
+
+function buscarUsuario($conexao, $email)
+{
+    $sql = "SELECT * FROM administradores WHERE email = '$email'";
+    $resultado = executarQuery($conexao, $sql);
+    return mysqli_fetch_assoc($resultado);
+}

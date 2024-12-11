@@ -43,7 +43,7 @@
 
             <article class="banner">
                 <div class="banner-content destaque ">
-                    <h2>Bem-vindo à Barbearia Two Brothers</h2>
+                    <h2>Bem-vindooooooooooo à Barbearia Two Brothers</h2>
                     <p>Seu estilo, nossa paixão.</p>
                     <a href="login.php" class="button ">Agende seu horário</a>
                 </div>
