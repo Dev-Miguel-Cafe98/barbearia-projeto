@@ -10,13 +10,13 @@ function executarQuery($conexao, $sql)
 
 //Funcao para inserir novos usuários
 
-function inserirUsuario($conexao, $nome, $email, $senha)
+function inserirUsuario($conexao, $nome, $telefone, $email, $servicos, $mensagem)
 {
 
     // Montando o comando SQL para fazer o INSERT dos dados 
 
-    $sql = "INSERT INTO clientes (nome, email, senha)
-    VALUES('$nome','$email','$senha')";
+    $sql = "INSERT INTO clientes (nome, email, telefone, servicos, mensagem)
+    VALUES('$nome','$email','$telefone','$servicos','$mensagem')";
 
     // Executando o comando no banco Via PHP
 

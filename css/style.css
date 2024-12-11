@@ -29,7 +29,26 @@ h1,
 h2,
 p,
 figure,
-.links-menu,
+.menu-toggle {
+    display: none; /* Initially hidden on larger screens */
+    /* Your toggle styling here (e.g., font-size, padding, color) */
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .menu-toggle {
+        display: inline-block; /* Show the toggle */
+    }
+    .links-menu {
+        display: none; /* Initially hide the menu */  
+    }
+    .links-menu.active {
+        display: block; /* Show the menu when 'active' class is present */
+    }
+}
+
+
 article {
     margin: 0;
     padding: 0;
@@ -108,10 +127,9 @@ aplicamos os ajustes de layout (flex) */
 .menu a:hover {
     background-color: var(--cor-intermediaria);
 }
-
 .links-menu {
-    list-style: none;
-    display: none;
+    background-color: blanchedalmond;
+    border-radius: 50px;
 }
 
 .links-menu a {
@@ -263,13 +281,7 @@ footer {
 }
 
 
-.texto-ilustrativo {
-    background-color: #000;
-    max-width: 100%;
-    height: auto;
-    text-align: center;
-    
-}
+
 
 .limitador img {
     width: 90px;
@@ -279,10 +291,7 @@ footer {
 
 
 
-.links-menu {
-    background-color: blanchedalmond;
-    border-radius: 50px;
-}
+
 
 .barbearia-conteudo {
     background-color: #000;
@@ -769,3 +778,19 @@ p {
   
   }
   
+  .elementor-menu-toggle {
+    display: none; /* Initially hidden */
+    cursor: pointer;
+}
+
+.menu:hover .elementor-menu-toggle {
+    display: inline-block;
+}
+
+.elementor-menu-toggle__icon--open,
+.elementor-menu-toggle__icon--close {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Add more specific styles for the icons and animations as needed */

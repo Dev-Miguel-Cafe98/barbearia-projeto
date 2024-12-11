@@ -14,11 +14,11 @@
         <div class="limitador">
             <h1 class="titulo"><img src="imagens/2_irmãos-removebg-preview.png" alt=""></a></h1>
             <nav class="menu">
-                <h2 class="titulo-menu"><a href="">Menu &equiv; </a></h2>
+            <h2 class="titulo-menu"><a href="">Menu &equiv; </a></h2>
                 <ul class="links-menu">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="servicos.php">Serviços</a></li>
-                    <li><a href="servicos">Contato</a></li>
+                    <li><a href="#" data-target="home">Home</a></li>
+                    <li><a href="#" data-target="servicos">Serviços</a></li>
+                    <li><a href="#" data-target="contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,61 +39,68 @@
     </main>
 
     <main class="conteudo">
-        <article class="banner">
-            <div class="banner-content destaque ">
-                <h2>Bem-vindo à Barbearia Two Brothers</h2>
-                <p>Seu estilo, nossa paixão.</p>
-                <a href="login.php" class="button ">Agende seu horário</a>
-            </div>
-        </article>
+        <section id="home">
 
-        <div class="missao-container">
-            <article class="missao limitador">
-                <p>"Experimente a sensação de um cuidado especial na Barbearia Two Brothers.
-                    Nosso compromisso é proporcionar um momento de relaxamento e bem-estar, onde você pode cuidar de si
-                    mesmo enquanto desfruta de um serviço de qualidade. Com profissionais altamente qualificados e um
-                    ambiente moderno, oferecemos uma ampla gama de serviços para atender às suas necessidades."</p>
-            </article>
-        </div>
-        <article class="fundo-card  ">
-            <section class="servicos limitador"> <!-- Use <section> instead of <div> -->
-                <h2>Nossos Serviços</h2>
-
-                <div class="cards-container">
-
-                    <article class="card">
-                        <img src="imagens/corte.jpg" alt="Corte Masculino">
-                        <h3>Corte Masculino</h3>
-                        <p>R$ 30,00</p>
-                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
-
-                    </article>
-                    <article class="card ">
-                        <img src="imagens/corte-barba.jpg" alt="Corte + Barba">
-                        <h3>Corte + Barba</h3>
-                        <p>R$ 40,00</p>
-                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
-                    </article>
-                    <article class="card">
-                        <img src="imagens/barba.jpg" alt="Barba">
-                        <h3>Barba</h3>
-                        <p>R$ 15,00</p>
-                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
-                    </article>
-                    <article class="card">
-                        <img src="imagens/design mais barba.jpg" alt="Barba + Design">
-                        <h3>Barba + Design</h3>
-                        <p>R$ 25,00</p>
-                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
-                    </article>
-                    <article class="card">
-                        <img src="imagens/limpeza de sobrancelha.jpg" alt="Limpeza Sobrancelha">
-                        <h3>Limpeza Sobrancelha</h3>
-                        <p>R$ 15,00</p>
-                        <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
-                    </article>
-                    <!-- Add more cards as needed -->
+            <article class="banner">
+                <div class="banner-content destaque ">
+                    <h2>Bem-vindo à Barbearia Two Brothers</h2>
+                    <p>Seu estilo, nossa paixão.</p>
+                    <a href="login.php" class="button ">Agende seu horário</a>
                 </div>
+            </article>
+
+            <div class="missao-container">
+                <article class="missao limitador">
+                    <p>"Experimente a sensação de um cuidado especial na Barbearia Two Brothers.
+                        Nosso compromisso é proporcionar um momento de relaxamento e bem-estar, onde você pode cuidar de si
+                        mesmo enquanto desfruta de um serviço de qualidade. Com profissionais altamente qualificados e um
+                        ambiente moderno, oferecemos uma ampla gama de serviços para atender às suas necessidades."</p>
+                </article>
+            </div>
+        </section>
+
+        <article class="fundo-card  ">
+            <section id="servicos">
+
+                <section class="servicos limitador"> <!-- Use <section> instead of <div> -->
+                    <h2>Nossos Serviços</h2>
+
+                    <div class="cards-container">
+
+                        <article class="card">
+                            <img src="imagens/corte.jpg" alt="Corte Masculino">
+                            <h3>Corte Masculino</h3>
+                            <p>R$ 30,00</p>
+                            <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+
+                        </article>
+                        <article class="card ">
+                            <img src="imagens/corte-barba.jpg" alt="Corte + Barba">
+                            <h3>Corte + Barba</h3>
+                            <p>R$ 40,00</p>
+                            <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+                        </article>
+                        <article class="card">
+                            <img src="imagens/barba.jpg" alt="Barba">
+                            <h3>Barba</h3>
+                            <p>R$ 15,00</p>
+                            <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+                        </article>
+                        <article class="card">
+                            <img src="imagens/design mais barba.jpg" alt="Barba + Design">
+                            <h3>Barba + Design</h3>
+                            <p>R$ 25,00</p>
+                            <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+                        </article>
+                        <article class="card">
+                            <img src="imagens/limpeza de sobrancelha.jpg" alt="Limpeza Sobrancelha">
+                            <h3>Limpeza Sobrancelha</h3>
+                            <p>R$ 15,00</p>
+                            <a href="login.php"><button href="login.php" class="button ">Agendar seu horário</button></a>
+                        </article>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </section>
             </section>
         </article>
 
@@ -143,7 +150,8 @@
         ?>
     </main>
 
-    <footer class="rodape">
+    <footer class="rodape"><section id="contato">
+   
         <article class="contact-info ">
             <p>Barbearia Two Brothers</p>
             <p>Rua César Marengo, 325 - Campo Grande, São Paulo - SP, 04455-220</p>
@@ -170,11 +178,41 @@
 
     </footer>
 
-    <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
     <script>
         function redirectToLogin() {
             window.location.href = 'login.php'; // Substitua pelo caminho da sua página de login
         }
+    </script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const linksMenu = document.querySelector('.links-menu');
+        const openIcon = document.querySelector('.menu-toggle__icon--open');
+        const closeIcon = document.querySelector('.menu-toggle__icon--close');
+
+        menuToggle.addEventListener('click', () => {
+            linksMenu.classList.toggle('active'); // Toggle the 'active' class
+            openIcon.style.display = linksMenu.classList.contains('active') ? 'none' : 'inline'; // Toggle icons
+            closeIcon.style.display = linksMenu.classList.contains('active') ? 'inline' : 'none';
+        });
+    </script>
+    <script>
+        const navLinks = document.querySelectorAll('.links-menu a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const targetId = link.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 

@@ -64,6 +64,32 @@ registrationForm.addEventListener('submit', function (event) {
         });
 });
 
+// Obtendo todos os links da navbar
+const navLinks = document.querySelectorAll('.links-menu a');
+
+// Adicionando um event listener a cada link
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Impede o comportamento padrão do link
+
+    const targetId = link.getAttribute('data-target');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const linksMenu = document.querySelector('.links-menu');
+
+// Toggle menu visibility
+menuToggle.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    linksMenu.classList.toggle('active'); // Toggle the 'active' class
+});
+
 
 
 
