@@ -17,9 +17,8 @@
                 <h2 class="titulo-menu"><a href="">Menu &equiv; </a></h2>
                 <ul class="links-menu">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="produtos.php">Produtos</a></li>
                     <li><a href="servicos.php">Serviços</a></li>
-                    <li><a href="contato.php">Contato</a></li>
+                    <li><a href="servicos">Contato</a></li>
                 </ul>
             </nav>
         </div>

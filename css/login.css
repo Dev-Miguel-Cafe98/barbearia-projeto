@@ -72,7 +72,9 @@
 }
 
 .input-group i {
-   /* Style the icon as needed */
+   font-size: 18px; 
+color: #666; 
+margin-left: 5px;
 }
 
 /* other styles...*/
