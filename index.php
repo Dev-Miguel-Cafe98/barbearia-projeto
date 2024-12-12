@@ -144,10 +144,7 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
-        <?php
-        require 'contato.php';
-
-        ?>
+        <?php require 'contato.php';?>
     </main>
 
     <footer class="rodape"><section id="contato">

@@ -1,54 +1,67 @@
-const loginForm = document.getElementById('loginForm');
-const registrationForm = document.getElementById('registrationForm');
+const dia = document.querySelector('.dia');
+const horario = document.querySelector('.horario');
+const btnHorario = document.querySelector('.btnHorario');
+const nome = document.querySelector('.nome');
+const telefone = document.querySelector('.telefone');
+const servico = document.querySelector('.servico');
+const observacoes = document.querySelector('.observacoes');
+const agendar = document.querySelector('.agendar');
 
-loginForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+let reserva = {
+    dia: '',
+    horario: '',
+    nome: '',
+    telefone: '',
+    servico: '',
+    observacoes: ''
+}
 
-    const userData = { email, password };
-    fetch('login.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Login realizado com sucesso!');
-                window.location.href = 'home.php';
-            } else {
-                alert(data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Erro ao logar:', error);
-            alert('Erro ao logar. Por favor, tente novamente mais tarde.');
-        });
+dia.addEventListener('change', (e) => {
+    reserva.dia = e.target.value;
 });
 
-registrationForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
+horario.addEventListener('change', (e) => {
+    reserva.horario = e.target.value;
+});
 
-    if (password !== confirmPassword) {
-        alert('Senhas não conferem!');
-        return;
-    }
+nome.addEventListener('change', (e) => {
+    reserva.nome = e.target.value;
+});
 
-    const userData = { name, email, password };
-    fetch('cadastro.php', {
+telefone.addEventListener('change', (e) => {
+    reserva.telefone = e.target.value;
+});
+
+servico.addEventListener('change', (e) => {
+    reserva.servico = e.target.value;
+});
+
+observacoes.addEventListener('change', (e) => {
+    reserva.observacoes = e.target.value;
+});
+
+agendar.addEventListener('click', () => {
+    console.log(reserva);
+    //aqui você pode enviar os dados para o seu servidor
+});
+    fetch('https://seu-servidor.com/api/reserva', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(userData)
+        body: JSON.stringify(reserva)
     })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        //aqui você pode exibir uma mensagem de sucesso para o usuário
+    })
+<<<<<<< HEAD
+    .catch((error) => {
+        console.error('Error:', error);
+        //aqui você pode exibir uma mensagem de erro para o usuário
+    });
+=======
         .then(response => response.json())
         .then(data => {
             if (data.success) {
@@ -93,3 +106,4 @@ menuToggle.addEventListener('click', (event) => {
 
 
 
+>>>>>>> 4a22b51bab60a717f21ba8edfd7c15b8a28617ce
