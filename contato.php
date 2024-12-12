@@ -1,10 +1,29 @@
-
 <?php
+require 'funcoes.php';
 $successMessage = "";
 if (isset($_GET['success']) && $_GET['success'] == 1) {
     $successMessage = "<p style='color: green;'>Sua mensagem foi enviada com sucesso!</p>";
 }
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome"];
+    $telefone = $_POST["phone"];
+    $email = $_POST["email"];
+    $servicos = $_POST["servicos"];
+    $mensagem = $_POST["mensagem"];
+    
+
+    inserirUsuario($conexao, $nome, $telefone, $email, $servicos, $mensagem);
+    header("Location: contato.php?success=1");
+
+}
+
+ 
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,7 +33,7 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
 <body>
     <h1>CONTATO</h1>
     <div id="comp-k5cws23b">
-        <form id="comp-kegqxf57" action="enviar_contato.php" method="post">
+        <form id="comp-kegqxf57" action="" method="post">
             <div><input type="text" name="nome" placeholder="Nome *" required></div>
             <div><input type="tel" name="phone" placeholder="Telefone"></div>
             <div><input type="email" name="email" placeholder="Email *" required></div>

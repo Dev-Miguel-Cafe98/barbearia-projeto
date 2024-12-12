@@ -14,10 +14,10 @@ mysqli_set_charset($conexao, "utf8");
 
 //Verificando a conexao
 
-// if($conexao === false){
-//     die("Erro: ".mysqli_connect_error());
-// }else {
-//     echo "beleza, segue o jogo...";
-// }
+if($conexao === false){
+    die("Erro: ".mysqli_connect_error());
+}else {
+    echo "beleza, segue o jogo...";
+}
 
 ?>

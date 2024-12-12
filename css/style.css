@@ -29,7 +29,26 @@ h1,
 h2,
 p,
 figure,
-.links-menu,
+.menu-toggle {
+    display: none; /* Initially hidden on larger screens */
+    /* Your toggle styling here (e.g., font-size, padding, color) */
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .menu-toggle {
+        display: inline-block; /* Show the toggle */
+    }
+    .links-menu {
+        display: none; /* Initially hide the menu */  
+    }
+    .links-menu.active {
+        display: block; /* Show the menu when 'active' class is present */
+    }
+}
+
+
 article {
     margin: 0;
     padding: 0;
@@ -108,10 +127,9 @@ aplicamos os ajustes de layout (flex) */
 .menu a:hover {
     background-color: var(--cor-intermediaria);
 }
-
 .links-menu {
-    list-style: none;
-    display: none;
+    background-color: blanchedalmond;
+    border-radius: 50px;
 }
 
 .links-menu a {
@@ -180,16 +198,8 @@ aplicamos os ajustes de layout (flex) */
 }
 
 
-/* Função clamp()
-Usada para definir um valor que se ajusta dinamicamente
-entre um valor MÍNIMO, IDEAL/FLEXÍVEL/VARIÁVEL e MÁXIMO. */
-.destaque h2 {
-    font-size: clamp(3rem, 10vw, 7rem);
-}
 
-.destaque p {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-}
+
 
 article h2 {
     padding: 1rem;
@@ -212,40 +222,29 @@ article p {
     margin-top: 2rem;
 }
 
-.rodape {
-    background-color: var(--cor-escura);
-    color: var(--cor-clara);
-    height: 40vh;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-}
 
 
 
 
 /* Regras Condicionais usando Media Queries */
 @media screen and (min-width: 600px) {
-
+    
     /* Escondendo a palavra Menu */
     .titulo-menu {
         display: none;
     }
-
+    
     /* Exibindo os links do menu */
     .links-menu {
         display: flex;
     }
-
+    
     /* Ajustamos o tamanho do menu (nav) fazendo-o "esticar",
     aumentando o espaçamento dentro dele. */
     .menu {
         width: 60%;
     }
-
+    
     /* Forçamos cada item (li) da lista a ter largura total e,
     com isso, redistribuir e ocupar todos os espaços dentro do menu (nav) */
     .links-menu li {
@@ -255,14 +254,14 @@ article p {
 
 
 @media screen and (min-width: 1000px) {
-
+    
     /* Aumentamos o tamanho base do font-size. Desta forma,
     todos os textos do site (em especial os que usam REM), 
     mudam de tamanho proporcionalmente. */
     html {
         font-size: 20px;
     }
-
+    
     /* Aumentamos a altura da div.limitador contida
     no topo (header) */
     .topo .limitador {
@@ -282,13 +281,7 @@ footer {
 }
 
 
-.texto-ilustrativo {
-    background-color: #000;
-    max-width: 100%;
-    height: auto;
-    text-align: center;
 
-}
 
 .limitador img {
     width: 90px;
@@ -298,17 +291,14 @@ footer {
 
 
 
-.links-menu {
-    background-color: blanchedalmond;
-    border-radius: 50px;
-}
+
 
 .barbearia-conteudo {
     background-color: #000;
     max-width: 100%;
     height: auto;
     text-align: center;
-
+    
 }
 
 .banner {
@@ -457,10 +447,10 @@ footer {
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 15px;
-
+    
     /* Apply grayscale to the BACKGROUND only */
     filter: grayscale(50%);
-
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -484,16 +474,6 @@ p {
     font-size: 1.2rem;
 }
 
-.rodape-container {
-    text-align: center;
-    background-color: var(--cor-escura);
-}
-
-.rodape-container p {
-    color: var(--cor-clara);
-    font-size: 1.2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
 .card button {
     background-color: var(--cor-escura);
@@ -505,7 +485,7 @@ p {
     transition: background-color 0.3s ease;
     transform: scale(0.8);
     transition: 0.5s;
-
+    
 }
 
 .card button:hover {
@@ -517,7 +497,7 @@ p {
 }
 
 .fundo-card {
-
+    
     background-image: url("../imagens/fundo-cards.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -556,7 +536,7 @@ p {
     /* Distribute cards evenly */
     flex-wrap: wrap;
     /* Allow wrapping on smaller screens */
-
+    
 }
 
 .card {
@@ -570,7 +550,7 @@ p {
     margin: 15px;
     /* Spacing between cards */
     box-sizing: border-box;
-
+    
 }
 
 .client-name {
@@ -643,7 +623,7 @@ p {
         align-items: center;
         /* Center cards horizontally on smaller screens */
     }
-
+    
     .card {
         width: 90%;
         /* Make cards take up most of the width on smaller screens */
@@ -680,7 +660,7 @@ p {
         flex-direction: column;
         /* Stack vertically on smaller screens if desired*/
     }
-
+    
     .client-name,
     .hashtags {
         align-self: auto;
@@ -693,10 +673,9 @@ p {
     }
 }
 
-.contact-info{
-    text-align: center;
-    
-}
+
+
+
 .call-to-action {
     background-color: var(--cor-escura);
     color: var(--cor-clara);
@@ -712,11 +691,27 @@ p {
 }
 
 
-
 .rodape {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 40vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.rodape-container {
+    text-align: center;
+    background-color: var(--cor-escura);
+}
+
+.rodape-container p {
+    color: var(--cor-clara);
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .copy-right {
@@ -783,3 +778,19 @@ p {
   
   }
   
+  .elementor-menu-toggle {
+    display: none; /* Initially hidden */
+    cursor: pointer;
+}
+
+.menu:hover .elementor-menu-toggle {
+    display: inline-block;
+}
+
+.elementor-menu-toggle__icon--open,
+.elementor-menu-toggle__icon--close {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Add more specific styles for the icons and animations as needed */
