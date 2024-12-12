@@ -24,11 +24,10 @@ html {
 }
 
 /* Reset de alguns elementos */
-body,
-h1,
-h2,
-p,
-figure,
+
+
+
+
 .menu-toggle {
     display: none; /* Initially hidden on larger screens */
     /* Your toggle styling here (e.g., font-size, padding, color) */

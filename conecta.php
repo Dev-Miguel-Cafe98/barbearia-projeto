@@ -1,4 +1,10 @@
 <?php
+
+
+
+
+
+
 // Parametros de acesso ao servidor
 $servidor = "localhost";
 $usuario = "root";

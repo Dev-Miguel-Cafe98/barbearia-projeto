@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia TWO BROTHERS</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    
 </head>
-
 <body>
-    <header class="topo">
+<header class="topo">
         <div class="limitador">
             <h1 class="titulo"><img src="imagens/2_irmãos-removebg-preview.png" alt=""></a></h1>
             <nav class="menu">
@@ -149,71 +146,5 @@
 
         ?>
     </main>
-
-    <footer class="rodape"><section id="contato">
-   
-        <article class="contact-info ">
-            <p>Barbearia Two Brothers</p>
-            <p>Rua César Marengo, 325 - Campo Grande, São Paulo - SP, 04455-220</p>
-            <p>Telefone: (11) 96186-8302</p>
-            <p class="copyright">&copy; 2024 Barbearia Two Brothers. Todos os direitos reservados.</p>
-
-        </article>
-
-
-
-        <div class="social-media">
-            <a data-testid="linkElement" href="https://api.whatsapp.com/send?phone=5511961868302" target="_blank"
-                rel="noreferrer noopener" class="j7pOnl"><wow-image id="img_comp-lf9wa09n" class="HlRz5e BI8PVQ"
-                    data-image-info="{&quot;containerId&quot;:&quot;comp-lf9wa09n&quot;,&quot;displayMode&quot;:&quot;fill&quot;,&quot;targetWidth&quot;:71,&quot;targetHeight&quot;:66,&quot;isLQIP&quot;:false,&quot;encoding&quot;:&quot;AVIF&quot;,&quot;imageData&quot;:{&quot;width&quot;:400,&quot;height&quot;:400,&quot;uri&quot;:&quot;fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif&quot;,&quot;name&quot;:&quot;372108180_WHATSAPP_ICON_400.gif&quot;,&quot;displayMode&quot;:&quot;fill&quot;}}"
-                    data-motion-part="BG_IMG" data-bg-effect-name="" data-has-ssr-src=""
-                    style="--wix-img-max-width:max(400px, 100%)"><img
-                        src="https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif"
-                        alt="Whatsapp #BarbeariaTwoBrothers" title="Whatsapp #BarbeariaTwoBrothers" loading="lazy"
-                        decoding="async" style="width:71px;height:66px;object-fit:cover" width="71" height="66"
-                        srcset="https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 1x, https://static.wixstatic.com/media/fc962d_dbe051afca5641fa8237dc9a7b5cec43~mv2.gif 2x"
-                        fetchpriority="low" loading="lazy" decoding="async"></wow-image></a>
-        </div>
-
-
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script>
-        function redirectToLogin() {
-            window.location.href = 'login.php'; // Substitua pelo caminho da sua página de login
-        }
-    </script>
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const linksMenu = document.querySelector('.links-menu');
-        const openIcon = document.querySelector('.menu-toggle__icon--open');
-        const closeIcon = document.querySelector('.menu-toggle__icon--close');
-
-        menuToggle.addEventListener('click', () => {
-            linksMenu.classList.toggle('active'); // Toggle the 'active' class
-            openIcon.style.display = linksMenu.classList.contains('active') ? 'none' : 'inline'; // Toggle icons
-            closeIcon.style.display = linksMenu.classList.contains('active') ? 'inline' : 'none';
-        });
-    </script>
-    <script>
-        const navLinks = document.querySelectorAll('.links-menu a');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-
-                const targetId = link.getAttribute('data-target');
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
-
 </html>
